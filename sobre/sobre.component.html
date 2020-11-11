@@ -1,0 +1,136 @@
+<body style = "background-color : #FFBD1D; text-align : center;">
+
+<header style = "background-color: #FFBD1D; margin-bottom: -190px;">
+<div class='content'>
+    <div class='visible'>
+      <p style = "font-family: 'Multi'">SOBRE </p>
+      <ul>
+        <li> NÓS</li>
+        <li> NOIƵ</li>
+        <li> NÓS</li>
+        <li >NOIƵ</li>
+      </ul>
+    </div>
+</div>
+
+</header>
+<a id = "voltar" style = "margin-right : 63rem" href = "/"><i style ="font-size: 48px; color : white" class="material-icons">keyboard_backspace
+
+</i></a>
+
+  
+  <div>
+  <h1 id = "titulo" >tudo que nós tem é nós - Emicida</h1></div>
+
+<div >
+
+<h2 id = "descricao">Mais uma brincando só pra vocês ver
+  Que o pai 'ta abusado
+  Elas 'tão jogando sem perceber
+  Cacaraio Cacaraio
+  Dj Pedro comanda a festa
+  E ela que manda nesse ambiente
+  Pouca coisa nem te interessa
+  Ela sabe o que quer pela frente
+  Ela quer zoar só curtir sua vida
+  Deixa ela causar dançar com a raba
+  Sem ser interrompida
+  Ela quer zoar só curtir sua vida
+  Deixa ela causar dançar com a raba
+  Sem ser interrompida
+  Calma moça pra fora essa linda polpa
+  Desce e sobe a minha ladeira
+  Maloqueiro gata eu não 'to de to
+</h2></div>
+<div class="card-group" >
+  <div class="card" style = "margin-right: 2px; margin-left : 2px; margin-bottom : 100px; background-color :  #FFBD1D; text-align : justify">
+    <img class="card-img-top" src="../assets/foto_github.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style = "font-family: 'Roboto Slab', serif; font-size : 23px;"
+      >Gabriel Gomes de Oliveira Costa</h5>
+      <p style = "font-family: 'Roboto Slab', serif; font-size : 23px;">19 anos</p>
+      <p class="card-text" style = "font-family: 'Roboto Slab', serif; font-size : 23px;">Morador do Extremo Sul de SP</p>
+      <p class="card-text" style = "font-family: 'Roboto Slab', serif; font-size : 23px;">Estudante do Bacharelado de Ciência e Tecnologia na UFABC</p>
+    </div>
+    <a href="https://www.linkedin.com/in/gabriel-gomes-de-oliveira-costa-613b4a194/"><img src="../assets/linkedin.png"></a>
+    <a href="https://www.linkedin.com/in/gabriel-gomes-de-oliveira-costa-613b4a194/"><img src="../assets/instagram.png"></a>
+    <a href="https://www.linkedin.com/in/gabriel-gomes-de-oliveira-costa-613b4a194/"><img src="../assets/github.png"></a>
+
+    <button class="btn btn-lg btn-outline-primary"
+      (click)="openScrollableGomesContent(GomesContent)"> 
+      Saiba mais
+    </button> 
+  </div>
+  <div class="card" style = "margin-right: 1px; margin-bottom : 100px;background-color :  #FFBD1D">
+    <img class="card-img-top" src="../assets/camisarosa.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style = "font-family: 'Roboto Slab', serif; font-size : 23px;">Gabriel Antony Passos</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <button class="btn btn-lg btn-outline-primary"
+      (click)=" openScrollableAntonyContent(AntonyContent)"> 
+      Saiba mais
+    </button> 
+      
+    </div>
+  </div>
+  <div class="card"  style ="margin-left : 2px;margin-right : 2px;margin-bottom : 100px;background-color :  #FFBD1D">
+    <img class="card-img-top" src="../assets/Venezi.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style = "font-family: 'Roboto Slab', serif; font-size : 23px;">Gabriel Venezi dos Santos</h5>
+      <p class="card-text" >This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    <button class="btn btn-lg btn-outline-primary"
+  (click)="openScrollableVeneziContent(VeneziContent)"> 
+  Saiba mais
+</button> 
+  </div>
+  
+
+</div>
+<ng-template #AntonyContent let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Gabriel Antony</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+        <p style = "font-size : 16px; color : black;">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+      </div>
+    </ng-template>
+<ng-template #GomesContent let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Gabriel Gomes</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style = "font-size : 16px; color : black;">Sou formado em técnico em Eletrônica pela Etec Carina Carinhato. Atualmente, sou aluno do Bacharelado de Ciência e Tecnologia da Universidade Federal do ABC, sou um grande entusiasta da área tecnologia e sempre disposto a aprender sobre a área, logo, estou sempre estudando e me aprimorando, atualmente, possuo conhecimentos na linguagem Python, principalmente na área de Data Science, e tenho conhecimentos básicos em MySql.
+          Vale também ressaltar que realizo uma pesquisa de extensão e cultura com a Universidade Federal do ABC e a Fundação Getúlio Vargas, que visa estudar os impactos da pandemia na população da região do M' Boi Mirim e participo realizando entrevistas e fazendo análise de dados.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Fechar</button>
+      </div>
+    </ng-template>
+<ng-template #VeneziContent let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Gabriel Venezi</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p  style = "font-size : 16px; color : black;">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+      </div>
+    </ng-template>    
+
+</body>

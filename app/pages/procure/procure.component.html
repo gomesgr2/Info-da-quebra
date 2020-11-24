@@ -1,27 +1,77 @@
-<body style = "background-color : FFBD1D" >
+<body style = "background-color : #FFBD1D;  ">
+  <div >
   
-    <header class="header-6" style = "height :100; background-color : #FFBD1D;justify-items : center center; ">
-        <div>
-            <img src = "./assets/imagens/home/logo_info.svg">
-        </div>
-        
-       
-    </header>
+  
+  <div style = "margin-right : 10px; margin-left : 10px;">
 
-  
+    <div class= "logo">
+      <img src= "../assets/imagens/procure/logo-procure.svg">
+    </div>
+
+    <div  *ngIf = "localizacao.CEP === ''">
+    <ngb-toast *ngIf="show" header="Salve, Quebrada !" [autohide]="false" (hidden)="show=false" style = "background-color: #ffbd1d">
+      <div class = row>
+      <img src = "./assets/imagens/procure/mobile-procure.png">
+     </div> <p style = "color : black; font-size : 1rem; text-align : justify;">Para encontrar os orgãos públicos próximo a sua casa, digite o CEP abaixo e clique no botão ao lado </p>
+     <a href = "https://buscacepinter.correios.com.br/app/endereco/index.php?t" style = " font-size : .8rem;" target="_blank" >Caso não saiba seu CEP clique aqui</a>
+    </ngb-toast></div>
+
 
     <div style = "text-align: center;">
-    <img src ='./assets/imagens/procure/pesquisa.png'> </div>
-    <div  style = "text-align: center;">
-        <a></a>
-      </div>
-    <div  style = "text-align: center;">
-      <a href = "/" class = "button1"><i  style = "margin : 5 10" class="material-icons right">local_hospital
-      </i>Órgãos Públicos de Saúde</a>
+      <div class="input-group mb-3">
+        <input type="text"  style = "margin-right : 40; margin-left : 40"  [(ngModel)]="localizacao.CEP" placeholder="Digite o CEP" aria-label="Digite o CEP" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button mat-raised-button (click)="postProcure()" style = "margin : 0.5%" class="btn btn-outline-secondary btn-lg" type="button" id="button-addon2">Procure</button>
+        </div></div>
+      
+    </div> 
+    
+      
+      <div class = 'card-group'>
+      <ng-container *ngFor="let locais of json_procure" >
+        
+        <div class = "card" >
+        <p style = "margin-top: 0rem;
+        margin-bottom: 0" class = "card-title"> Categoria : {{locais.categoria}}</p>
+        <p style = "margin-top: 0rem;
+        margin-bottom: 0">{{locais.nome}}</p>
+        <p style = "margin-top: 0rem;
+        margin-bottom: 0">Endereco : {{locais.endereco}}</p>
+        <p style = "margin-top: 0rem;
+        margin-bottom: 0">Distancia : {{locais.distancia}}</p>
+        <a [href] ="locais.rota" target="_blank">Clique aqui para ver a rota</a></div>
+
+      </ng-container>
     </div>
-  
-  
+
+    
+    
+
+    <div style = " margin-right : 50px; margin-left : 50px; margin-top : 40px">
+      <div style = "text-align: center; margin-top : 20px">
+        <h1 id = "title-map" style = "font-size : 1.5rem; font-family : 'monospace'">Procure também  no mapa abaixo :</h1></div>
+      <iframe id = "mapa" src="https://www.google.com/maps/d/embed?mid=1ohfoEIZh60QlY1H4ZUupxH15kovYpqKj&ll=-23.691147387969437%2C-46.77551805688808&z=15"></iframe>
+    </div> </div>
 
   
+
+  </div >
+  <div style = "text-align: center;">
+    <h1 style = "font-size : 1.5rem; font-family : 'monospace'; margin-top : 30px;"> Encontre mais mapas clicando nas imagens :</h1>
+    <div class="card-group" >
+    <div class = 'card' style = "background-color: #ffbd1d; border : 0px solid #ddd; ">
+    <h5 class = 'card-title' style = "font-size : 1.7rem; font-family : 'monospace'; "> Orgãos públicos de saúde</h5>
+    <a href = 'https://www.google.com/maps/d/u/0/viewer?mid=1dGxItpW5LX11qdv5Boc_RGJQY9BINVOT&ll=-23.676738109476833%2C-46.75701095717772&z=12' target="_blank"><img src = "../assets/imagens/procure/medica.png"></a></div>
+    <div class = 'card' style = "background-color: #ffbd1d;  border : 0px ">
+      <h5 class = 'card-title' style = "font-size : 1.7rem; font-family : 'monospace'; "> Lazer e Cultura</h5>
+
+    <a href = '/'><img src = "../assets/imagens/procure/bike.png"></a></div>
+
+  </div>
+  </div>
+  
+      
+
+
 
 </body>

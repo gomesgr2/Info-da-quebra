@@ -8,7 +8,7 @@ body {
     background-color: #f1f1f1;
     padding: 20px 10px;
   }
-  
+ 
   .header a {
     float: left;
     color: black;
@@ -63,6 +63,8 @@ a.button1
     font-family: 'Open Sans';
     font-size: 20px;
     margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
  
 }
 a.button1:hover
@@ -73,7 +75,7 @@ background-color:#FFFFFF;
 @media all and (max-width:30em){
 a.button1{
 display:block;
-margin:0.4em auto;} }
+} }
 
 .button1{
 animation:bouncy 5s infinite linear;
@@ -91,3 +93,19 @@ position:relative;
 .selected {
         font-weight: bold;
     }
+
+@media only screen and (min-width: 500px) {
+      #imagem_mobile{ display: none !important;  margin-right: 2px; margin-left : 2px;}
+      }
+     
+
+
+@media only screen and (max-width: 600px) {
+  #imagem_pc {
+    display : none;
+  } 
+  #imagem_mobile {
+    display : inline !important;
+  }
+
+}
